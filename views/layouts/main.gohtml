@@ -2,22 +2,76 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="With years of experience in revamping residential and commercial properties,
+	    QUICK-ELEC are electrical contractors based in Warrington covering a wide range of domestic and commercial electrical services in the North West (covering Warrington, Widnes, Runcorn,  Alderley Edge, Leigh and Wigan), all at very competitive prices.
+		We specialise in domestic rewires as we have fully qualified rewire teams who complete work only to the highest standard.
+		We understand what individuals and modern businesses look for when selecting an electrical contractor and we make extra efforts to exceed our customers' expectations.
+	    Electrician in Warrington, Cheshire and the whole North West">
+    <meta name="keywords" content="Warrington Electrician, Cheshire Electrician, North West Electrician, Widnes Electrician, Runcorn Electrician,  Alderley Edge Electrician, Leigh Electrician, Wigan electrician, residential electrician, commercial electrician, electrical contractors, rewire, domestic rewires, burglar alarms, cctv installation, consumer unit, lighting, led lighting, security lighting, driveway lighting, energy saving, North West, Cheshire, Merseyside, Manchester, Warrington, Widnes, Runcorn,  Alderley Edge, Leigh, Wigan ">
+    <meta name="author" content="Contra Design">
     {{block "meta" .}}
-        <meta property="og:title" content="Quick-Elec">
-        <meta property="og:description" content="">
-        <meta property="og:image" content="dist/img/">
+        <meta property="og:title" content="Quick-Elec - North West Electricians">
+        <meta property="og:description" content="With years of experience in revamping residential and commercial properties,
+	        QUICK-ELEC are electrical contractors based in Warrington covering a wide range of domestic and commercial electrical services in the North West (covering Warrington, Widnes, Runcorn,  Alderley Edge, Leigh and Wigan), all at very competitive prices.
+		    We specialise in domestic rewires as we have fully qualified rewire teams who complete work only to the highest standard.
+		    We understand what individuals and modern businesses look for when selecting an electrical contractor and we make extra efforts to exceed our customers' expectations.
+	        Electrician in Warrington, Cheshire and the whole North West">
+        <meta property="og:image" content="dist/img/fb_og/qe_plans_fb.jpg">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="628">
         <meta property="og:url" content="https://quick-elec.com">
 
+
+
         <title>Quick-Elec | Electricians North West</title>
     {{end}}
+
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-90635718-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
     <link rel="stylesheet" href="/dist/app.css?id=0">
 </head>
 <body>
+<header>
+    <a href="{{ URL::to('/') }}">
+        <div id="header-content">
+            <h1>Quick Elec - Electricians in Warrington, Cheshire and the North West</h1>
+            <h1>07943 707648</h1>
+        </div>
+    </a>
+
+
+    <a href="https://www.facebook.com/QuickElec" target="_blank"><div class="social facebook"></div></a>
+    <a href="https://twitter.com/QuickElec" target="_blank"><div class="social twitter"></div></a>
+
+    <a href="{{ URL::to('contact') }}">
+        <button id="contact-us" class="button--pill">Contact Us</button>
+    </a>
+    <div id="nav">
+        <ul class="list--inline">
+            <li>{!! link_to('/', 'Home') !!}</li>
+            <li>{!! link_to('about', 'About Us') !!}</li>
+            <li>{!! link_to('domestic', 'Domestic') !!}</li>
+            <li>{!! link_to('commercial', 'Commercial') !!}</li>
+            <li>{!! link_to('testimonials', 'Testimonials') !!}</li>
+            <li>{!! link_to('contact', 'Contact') !!}</li>
+        </ul>
+    </div>
+</header>
     {{template "content" .}}
-    <script src="/dist/app.js?id=0"></script>
+<footer>
+    <p>© {{ now()->year }} Quick-Elec. Warrington, Cheshire &amp; North West Electricians. Site by Contra Design</p>
+    <a href="https://www.ratedpeople.com/profile/quick-elec/" target="_blank"><div class="rated"></div></a>
+</footer>
+
+<script src="/dist/app.js?id=0"></script>
 </body>
 </html>

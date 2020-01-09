@@ -20,6 +20,7 @@ var (
 	tplDomestic *template.Template
 	tplCommercial *template.Template
 	tplTestimonials *template.Template
+	tplExterior *template.Template
 	tplContact *template.Template
 )
 
@@ -67,6 +68,13 @@ func commercial(w http.ResponseWriter, r *http.Request) {
 func testimonials(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
 	if err := tplTestimonials.Execute(w, nil); err != nil {
+		panic(err)
+	}
+}
+
+func exterior(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
+	if err := tplExterior.Execute(w, nil); err != nil {
 		panic(err)
 	}
 }
@@ -152,6 +160,13 @@ func main() {
 	tplTestimonials = template.Must(template.ParseFiles(
 		"views/layouts/main.gohtml",
 		"views/pages/testimonials.gohtml"))
+	if err != nil {
+		panic(err)
+	}
+
+	tplExterior = template.Must(template.ParseFiles(
+		"views/layouts/main.gohtml",
+		"views/pages/exterior.gohtml"))
 	if err != nil {
 		panic(err)
 	}
