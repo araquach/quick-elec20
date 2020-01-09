@@ -1,0 +1,681 @@
+@import "node_modules/concise.css/src/concise.scss";
+@import "node_modules/jquery-unslider/dist/sass/unslider.scss";
+@import "node_modules/jquery-unslider/dist/sass/unslider-dots.scss";
+
+$blue: rgb(0,0,51);
+$grey: rgb(83, 96, 102);
+$white: #FFF;
+$sky: rgb(90, 138, 186);
+$mobile-device: "only screen and (max-device-width: 640px), only screen and (min-device-width : 719px) and (max-device-width : 721px) and (-webkit-min-device-pixel-ratio : 2) and (orientation : portrait)";
+
+
+//
+// Main Styling
+// --------------
+
+   [container] {
+       padding: 0;
+       max-width: 1150px;
+       border: 1px solid rgba($grey, .5);
+
+@media #{$mobile-device} {
+    width: auto;
+    margin: auto;
+    min-width: none;
+    border: none;
+}
+}
+
+header {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    max-width: 1148px;
+    min-width: 750px;
+    height: 11em;
+    background: $blue;
+    background: rgba($blue, 0.9);
+    padding-top: 1em;
+
+@media #{$mobile-device} {
+    position: relative;
+    margin: auto;
+    width: auto;
+    max-width: none;
+    min-width: 0;
+    height: 7rem;
+}
+}
+
+#header-content {
+    position: absolute;
+    background: url('/images/new_logo.png') no-repeat left .5em top -.5em;
+    background-size: contain;
+    width: 16rem;
+    height: 10rem;
+
+h1 {
+    display: none;
+}
+
+@media #{$mobile-device} {
+    background: url('/images/new_logo.png') no-repeat left .5em top -1em;
+    background-size: contain;
+    width: 13rem;
+    height: 7rem;
+}
+}
+
+.social {
+    width: 2.5em;
+    height: 2.5em;
+
+@media #{$mobile-device} {
+    display: none;
+}
+}
+
+.social.facebook {
+    background: url('/images/icons/facebook_logo.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    right: 3.7em;
+    bottom: 6.3em;
+}
+
+.social.twitter {
+    background: url('/images/icons/twitter_logo.png') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    right: 8em;
+    bottom: 6.3em;
+}
+
+//
+// Contact us button
+// --------------------
+
+   #contact-us {
+       position: absolute;
+       right: 2em;
+       bottom: 1.2em;
+       border-radius: 15px;
+       border: 2px solid $white;
+
+@media #{$mobile-device} {
+    display: none;
+}
+}
+
+// ----------------------
+
+   #nav {
+       position: absolute;
+       bottom: 0;
+
+@media #{$mobile-device} {
+    width: auto;
+    margin: auto;
+    position: absolute;
+    top: 7em;
+}
+
+ul {
+    height: auto;
+
+@media #{$mobile-device} {
+    background: rgba($blue, .7);
+    padding: 1em;
+    display: none;
+}
+}
+
+li {
+    margin: 0;
+    padding: 0;
+
+&:last-of-type {
+     display: none;
+
+@media #{$mobile-device} {
+    display: block;
+}
+}
+
+a {
+    background: darken($blue, 5%);
+    background: rgba($blue, .7);
+    color: $white;
+    margin: 0;
+    padding: .7em 2em;
+
+@media #{$mobile-device} {
+    width: auto;
+    margin: 0;
+    padding: .7em;
+    line-height: 2em;
+    font-size: 1.5em;
+    background: none;
+}
+
+&:hover {
+     background: lighten($blue, 5%);
+     background: rgba($blue, 1);
+ }
+}
+}
+}
+
+.page-content {
+    padding-top: 9.5em;
+    float: left;
+
+@media #{$mobile-device} {
+    padding-top: 0;
+}
+
+h2 {
+    color: $blue;
+}
+}
+
+.page-content article {
+    margin-bottom: 2em;
+}
+
+.copy {
+    width: 45%;
+}
+
+.pics {
+    width: 45%;
+    background: red;
+    float: right;
+}
+
+@media #{$mobile-device} {
+    a.menu-b {
+        position: absolute;
+        right: 2em;
+        top: 2.8em;
+        width: 30px;
+        height: 25px;
+        background: url('/images/icons/menu_button2.png') no-repeat left top;
+        background-size: contain;
+        display: block;
+        margin: 0;
+    }
+}
+
+
+
+
+//
+// Unslider Banner Styling
+// ------------------------
+
+   .unslider-arrow {
+       top: 42em;
+       overflow: hidden;
+       text-indent: -999em;
+
+@media #{$mobile-device} {
+    top: 22em;
+}
+}
+
+.unslider-arrow.prev {
+    left: 20% !important;
+    width: 6em;
+    height: 4em;
+    background: url('/images/icons/arrow-left.png') no-repeat left 2em top;
+
+@media #{$mobile-device} {
+    width: 4em;
+    height: 3em;
+    background: url('/images/icons/arrow-left.png') no-repeat left 2em top;
+    background-size: contain;
+}
+}
+
+.unslider-arrow.next {
+    right: 20% !important;
+    width: 6em;
+    height: 4em;
+    background: url('/images/icons/arrow-right.png') no-repeat right 2em top;
+
+@media #{$mobile-device} {
+    width: 4em;
+    height: 3em;
+    background: url('/images/icons/arrow-right.png') no-repeat right 2em top;
+    background-size: contain;
+}
+}
+
+.unslider-nav {
+    position: absolute;
+    top: 43em;
+    left: 44%;
+
+@media #{$mobile-device} {
+    display: none;
+}
+}
+
+.unslider-nav ol li {
+    width: 10px !important;
+    height: 10px !important;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid #999;
+}
+
+.banner-image {
+    height: 47em;
+
+@media #{$mobile-device} {
+    height: 20em;
+}
+}
+
+.banner-image-1 {
+    background: url('/images/stock/qe_plans.jpeg') no-repeat top center;
+    background-size: cover;
+}
+
+.banner-image-2 {
+    background: url('/images/stock/qe_electrician.jpeg') no-repeat top center;
+    background-size: cover;
+}
+
+.banner-image-3 {
+    background: url('/images/stock/qe_cctv.jpeg') no-repeat top center;
+    background-size: cover;
+}
+
+.banner-image-4 {
+    background: url('/images/stock/qe_board.jpeg') no-repeat top center;
+    background-size: cover;
+}
+
+.banner-image-5 {
+    background: url('/images/stock/qe_ceiling_spots.jpeg') no-repeat top center;
+    background-size: cover;
+}
+
+.banner-image-6 {
+    background: url('/images/stock/qe_living_room.jpeg') no-repeat top center;
+    background-size: cover;
+}
+
+.banner-image-7 {
+    background: url('/images/stock/qe_exterior.jpeg') no-repeat top center;
+    background-size: cover;
+}
+
+
+%banner-copy {
+     width: 23em;
+     color: white;
+     font-size: 1em;
+     position: relative;
+     padding: 1.5em;
+     border-radius: 10px;
+     margin-top: 16em;
+     text-align: center;
+
+strong {
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+
+@media #{$mobile-device} {
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    border-radius: 0;
+}
+}
+
+.banner-copy.left {
+@extend %banner-copy;
+    background: rgba($sky, .8);
+    border: .1em solid $sky;
+    float: left;
+    margin-left: 3em;
+
+@media #{$mobile-device} {
+    float: none;
+    border: none;
+    margin: auto;
+    background: rgba($sky, .6);
+}
+}
+
+.banner-copy.right {
+@extend %banner-copy;
+    background: rgba($sky, .8);
+    border: .1em solid $sky;
+    float: right;
+    margin-right: 3em;
+
+@media #{$mobile-device} {
+    float: none;
+    border: none;
+    margin: auto;
+    background: rgba($sky, .6);
+}
+}
+
+.header {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+//
+// General Page Styling
+// --------------------
+
+   .full-page {
+       background: rgba($white, 0.9);
+       padding: 5em;
+       float: left;
+
+@media #{$mobile-device} {
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 2em;
+}
+
+h2 {
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+}
+
+[column] {
+@media #{$mobile-device} {
+    padding: 0;
+}
+}
+
+//
+// Home Page Styling
+// --------------------
+
+   .page-content img {
+       margin-bottom: 3em;
+       border: 2px solid $white;
+       padding: .2em;
+
+@media #{$mobile-device} {
+    margin: auto;
+    width: auto;
+}
+}
+
+.link-box {
+    height: 20em;
+    text-align: center;
+    border: .7em solid white;
+    padding: 0;
+
+@media #{$mobile-device} {
+    float: none;
+    border: none;
+    width: auto;
+    margin: auto;
+    margin-top: 1em;
+}
+
+&:last-of-type {
+     border-left: none;
+ }
+
+h3 {
+    color: $white;
+    height: 2.5em;
+    background-color: $blue;
+    background-color: rgba($blue, 0.75);
+    margin: 0;
+    line-height: 2.5em;
+}
+}
+
+.domestic {
+    background: url('/images/stock/qe_living_room.jpeg') no-repeat top center;
+    background-size: cover;
+}
+
+.commercial {
+    background: url('/images/stock/qe_office.jpeg') no-repeat top center;
+    background-size: cover;
+}
+
+//
+// About Page Styling
+// --------------------
+
+   .page-content.about {
+       background: url('/images/stock/qe_kitchen.jpeg') no-repeat top center;
+       background-size: cover;
+   }
+
+a.sector-link {
+    font-size: 1.4em;
+    float: left;
+    clear: left;
+    margin-top: 1.8em;
+    padding: .7em;
+    background: $blue;
+    background: rgba($blue, 0.75);
+    color: $white;
+    border-radius: 5px;
+
+&:hover {
+     opacity: .7;
+ }
+
+@media #{$mobile-device} {
+    font-size: 1em;
+}
+}
+
+//
+// Commercial Page Styling
+// --------------------
+
+   .page-content.commercial {
+       background: url('/images/stock/qe_office.jpeg') no-repeat top center;
+       background-size: cover;
+
+ul {
+    margin-bottom: 3em;
+}
+
+li {
+    font-size: 1.3em;
+}
+}
+
+//
+// Domestic Page Styling
+// --------------------
+
+   .page-content.domestic {
+       background: url('/images/stock/qe_living_room.jpeg') no-repeat top center;
+       background-size: cover;
+
+ul {
+    margin-bottom: 3em;
+}
+
+li {
+    font-size: 1.3em;
+}
+}
+
+//
+// Exterior Page Styling
+// --------------------
+
+   .page-content.exterior {
+       background: url('/images/stock/qe_exterior.jpeg') no-repeat top center;
+       background-size: cover;
+
+ul {
+    margin-bottom: 3em;
+}
+
+li {
+    font-size: 1.3em;
+}
+}
+
+//
+// Testimonial Page Styling
+// -------------------------
+
+   .page-content.testimonials {
+       background: url('/images/stock/qe_kitchen.jpeg') no-repeat top center;
+       background-size: cover;
+   }
+
+%quote {
+     width: 30em;
+     height: auto;
+     background-color: $white;
+     padding: 2em;
+     margin-bottom: 2em;
+     border-radius: 2em;
+
+@media #{$mobile-device} {
+    width: auto;
+}
+
+p {
+    margin-bottom: .6em;
+}
+
+p:nth-of-type(1) {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+p:nth-of-type(3) {
+    font-size: .9em;
+    font-weight: bold;
+}
+}
+
+.quote-left {
+@extend %quote;
+    float: left;
+}
+
+.quote-right {
+@extend %quote;
+    float: right;
+}
+
+
+//
+// Contact Page Styling
+// --------------------
+
+   .page-content.contact {
+       background: url('/images/stock/qe_reception_desk.jpeg') no-repeat top center;
+       background-size: cover;
+       padding: 3em;
+       float: none;
+
+@media #{$mobile-device} {
+    padding: 0;
+}
+}
+
+.contact-form {
+    width: 40em;
+    margin-top: 10em;
+    background: rgba($white, 0.8);
+    padding: 4em;
+    border-radius: 10px;
+
+@media #{$mobile-device} {
+    width: auto;
+    margin: auto;
+    border-radius: 0;
+    padding: 2em;
+}
+
+h2 {
+    margin-bottom: 1em;
+    color: lighten($blue, 10%);
+}
+
+label {
+    color: lighten($blue, 10%);
+    margin-bottom: 1.1em;
+    font-size: 1em;
+}
+
+ul {
+    border: 1px solid red;
+    background: lighten(red, 50%);
+    padding: 1em;
+    margin-bottom: 2em;
+
+li {
+    color: red;
+    list-style: none;
+}
+}
+
+.errorMessage {
+    color: red;
+}
+}
+
+
+//
+// Footer Styling
+// --------------
+
+   footer {
+       height: 7em;
+       background: rgba($blue, 0.9);
+       padding: 2em;
+       clear: both;
+       position: relative;
+
+p {
+    color: lighten($blue, 40%);
+    font-size: .8em;
+
+@media #{$mobile-device} {
+    width: 50%;
+    margin-top: -1em;
+}
+}
+
+.rated {
+    position: absolute;
+    right: 3em;
+    top: -.5em;
+    width: 12em;
+    height: 8em;
+    background: url('/images/icons/rated_people.png') no-repeat center;
+    background-size: contain;
+
+@media #{$mobile-device} {
+    width: 8em;
+    height: 5em;
+    right: 2em;
+    top: 1em;
+}
+}
+
+}
