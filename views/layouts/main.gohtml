@@ -27,48 +27,46 @@
     {{end}}
 
     <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+{{/*    <script>*/}}
+{{/*        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){*/}}
+{{/*            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),*/}}
+{{/*            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)*/}}
+{{/*        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');*/}}
 
-        ga('create', 'UA-90635718-1', 'auto');
-        ga('send', 'pageview');
-    </script>
+{{/*        ga('create', 'UA-90635718-1', 'auto');*/}}
+{{/*        ga('send', 'pageview');*/}}
+{{/*    </script>*/}}
 
     <link rel="stylesheet" href="/dist/app.css?id=0">
 </head>
 <body>
 <header>
-    <a href="{{ URL::to('/') }}">
+    <a href="/">
         <div id="header-content">
             <h1>Quick Elec - Electricians in Warrington, Cheshire and the North West</h1>
             <h1>07943 707648</h1>
         </div>
     </a>
-
-
     <a href="https://www.facebook.com/QuickElec" target="_blank"><div class="social facebook"></div></a>
     <a href="https://twitter.com/QuickElec" target="_blank"><div class="social twitter"></div></a>
 
-    <a href="{{ URL::to('contact') }}">
-        <button id="contact-us" class="button--pill">Contact Us</button>
+    <a href="/contact">
+        <button id="contact-us" class="button">Contact Us</button>
     </a>
     <div id="nav">
         <ul class="list--inline">
-            <li>{!! link_to('/', 'Home') !!}</li>
-            <li>{!! link_to('about', 'About Us') !!}</li>
-            <li>{!! link_to('domestic', 'Domestic') !!}</li>
-            <li>{!! link_to('commercial', 'Commercial') !!}</li>
-            <li>{!! link_to('testimonials', 'Testimonials') !!}</li>
-            <li>{!! link_to('contact', 'Contact') !!}</li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/domestic">Domestic</a></li>
+            <li><a href="/commercial">Commercial</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </div>
 </header>
     {{template "content" .}}
 <footer>
-    <p>© {{ now()->year }} Quick-Elec. Warrington, Cheshire &amp; North West Electricians. Site by Contra Design</p>
+    <p>Quick-Elec. Warrington, Cheshire &amp; North West Electricians. Site by Contra Design</p>
     <a href="https://www.ratedpeople.com/profile/quick-elec/" target="_blank"><div class="rated"></div></a>
 </footer>
 

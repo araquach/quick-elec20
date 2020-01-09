@@ -1,13 +1,10 @@
 {{define "content"}}
-<div class="page-content commercial">
-
-    <section grid class="full-page">
-
-        <div column="10">
-            <h2>Fully equipped for all commercial projects</h2>
+<div>
+    <div class="section columns">
+        <div class="column is-10">
+            <h2 class="title">Fully equipped for all commercial projects</h2>
         </div>
-
-        <article column="7">
+        <div class="column is-7">
             <p><strong>At QUICK-ELEC we have the experience and qualifications to be well equipped to carry out all types of Commercial work quickly and efficiently.</strong></p>
             <p>Aiming at all times to achieve 100% customer satisfaction with our prompt and friendly service, if you require:</p>
             <ul>
@@ -24,18 +21,23 @@
                 <li>Outdoor Electrical Work</li>
                 <li>Fixed wire testing</li>
             </ul>
-        </article>
-        <article column="5">
-            {{ Html::image('images/stock/qe_office.jpeg', 'Quick Elec', array('width' => 300 , 'height' => 200)) }}
-            {{ Html::image('images/stock/qe_reception_desk.jpeg', 'Quick Elec', array('width' => 300 , 'height' => 200)) }}
-        </article>
-        <article column="7">
-            <a href="{{ URL::to('contact') }}" class="sector-link">Contact us for more information</a>
-        </article>
-        <article column="5">
-            {{ Html::image('images/stock/qe_emergency_lighting.jpeg', 'Quick Elec', array('width' => 300 , 'height' => 200)) }}
-        </article>
-    </section>
-
+        </div>
+        <div class="column is-5">
+            <figure class="image is-3by2">
+                <img src="/dist/img/stock/qe_office.jpeg" alt="Quick Elec">
+            </figure>
+            <figure class="image is-3by2">
+                <img src="/dist/img/stock/qe_reception_desk.jpeg" alt="Quick Elec">
+            </figure>
+        </div>
+        <div class="column is-7">
+            <a href="/contact">Contact us for more information</a>
+        </div>
+        <div class="column is-5">
+            <figure class="image is-3by2">
+                <img src="/dist/img/stock/qe_emergency_lighting.jpeg" alt="Quick Elec">
+            </figure>
+        </div>
+    </div>
 </div>
 {{end}}
