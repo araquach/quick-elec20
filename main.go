@@ -16,6 +16,11 @@ import (
 
 var (
 	tplHome *template.Template
+	tplAbout *template.Template
+	tplDomestic *template.Template
+	tplCommercial *template.Template
+	tplTestimonials *template.Template
+	tplContact *template.Template
 )
 
 type ContactMessage struct {
@@ -34,6 +39,41 @@ func init() {
 func home(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
 	if err := tplHome.Execute(w, nil); err != nil {
+		panic(err)
+	}
+}
+
+func about(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
+	if err := tplAbout.Execute(w, nil); err != nil {
+		panic(err)
+	}
+}
+
+func domestic(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
+	if err := tplDomestic.Execute(w, nil); err != nil {
+		panic(err)
+	}
+}
+
+func commercial(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
+	if err := tplCommercial.Execute(w, nil); err != nil {
+		panic(err)
+	}
+}
+
+func testimonials(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
+	if err := tplTestimonials.Execute(w, nil); err != nil {
+		panic(err)
+	}
+}
+
+func contact(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
+	if err := tplContact.Execute(w, nil); err != nil {
 		panic(err)
 	}
 }
@@ -88,8 +128,48 @@ func main() {
 		panic(err)
 	}
 
+	tplAbout = template.Must(template.ParseFiles(
+		"views/layouts/main.gohtml",
+		"views/pages/about.gohtml"))
+	if err != nil {
+		panic(err)
+	}
+
+	tplDomestic = template.Must(template.ParseFiles(
+		"views/layouts/main.gohtml",
+		"views/pages/domestic.gohtml"))
+	if err != nil {
+		panic(err)
+	}
+
+	tplCommercial = template.Must(template.ParseFiles(
+		"views/layouts/main.gohtml",
+		"views/pages/commercial.gohtml"))
+	if err != nil {
+		panic(err)
+	}
+
+	tplTestimonials = template.Must(template.ParseFiles(
+		"views/layouts/main.gohtml",
+		"views/pages/testimonials.gohtml"))
+	if err != nil {
+		panic(err)
+	}
+
+	tplContact = template.Must(template.ParseFiles(
+		"views/layouts/main.gohtml",
+		"views/pages/contact.gohtml"))
+	if err != nil {
+		panic(err)
+	}
+
 	r := mux.NewRouter()
 	r.HandleFunc("/", home).Methods("GET")
+	r.HandleFunc("/about", about).Methods("GET")
+	r.HandleFunc("/commercial", commercial).Methods("GET")
+	r.HandleFunc("/domestic", domestic).Methods("GET")
+	r.HandleFunc("/testimonials", testimonials).Methods("GET")
+	r.HandleFunc("/contact", contact).Methods("GET")
 	// api
 	r.HandleFunc("/api/sendMessage", apiSendMessage).Methods("POST")
 
