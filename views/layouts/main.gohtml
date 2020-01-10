@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="With years of experience in revamping residential and commercial properties,
 	    QUICK-ELEC are electrical contractors based in Warrington covering a wide range of domestic and commercial electrical services in the North West (covering Warrington, Widnes, Runcorn,  Alderley Edge, Leigh and Wigan), all at very competitive prices.
 		We specialise in domestic rewires as we have fully qualified rewire teams who complete work only to the highest standard.
@@ -21,8 +22,6 @@
         <meta property="og:image:height" content="628">
         <meta property="og:url" content="https://quick-elec.com">
 
-
-
         <title>Quick-Elec | Electricians North West</title>
     {{end}}
 
@@ -40,36 +39,71 @@
     <link rel="stylesheet" href="/dist/app.css?id=0">
 </head>
 <body>
-<header>
-    <a href="/">
-        <div id="header-content">
-            <h1>Quick Elec - Electricians in Warrington, Cheshire and the North West</h1>
-            <h1>07943 707648</h1>
-        </div>
-    </a>
-    <a href="https://www.facebook.com/QuickElec" target="_blank"><div class="social facebook"></div></a>
-    <a href="https://twitter.com/QuickElec" target="_blank"><div class="social twitter"></div></a>
+<section class="section">
+    <div class="container">
+        <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="/dist/img/new_logo.png">
+                </a>
+                <h1>07943 707648</h1>
 
-    <a href="/contact">
-        <button id="contact-us" class="button">Contact Us</button>
-    </a>
-    <div id="nav">
-        <ul class="list--inline">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/domestic">Domestic</a></li>
-            <li><a href="/commercial">Commercial</a></li>
-            <li><a href="/testimonials">Testimonials</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/" class="navbar-item">
+                        Home
+                    </a>
+
+                    <a href="/about" class="navbar-item">
+                        About
+                    </a>
+
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                            More
+                        </a>
+
+                        <div class="navbar-dropdown">
+                            <a href="/domestic" class="navbar-item">
+                                Domestic
+                            </a>
+                            <a href="/commercial" class="navbar-item">
+                                Commercial
+                            </a>
+                            <a href="/testimonials" class="navbar-item">
+                                Testimonials
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="/contact" class="button is-primary">
+                                <strong>Contact Us</strong>
+                            </a>
+                            <a href="https://www.facebook.com/QuickElec" target="_blank"><div class="social facebook"></div></a>
+                            <a href="https://twitter.com/QuickElec" target="_blank"><div class="social twitter"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        {{template "content" .}}
+        <footer>
+            <p>Quick-Elec. Warrington, Cheshire &amp; North West Electricians. Site by Contra Design</p>
+            <a href="https://www.ratedpeople.com/profile/quick-elec/" target="_blank"><div class="rated"></div></a>
+        </footer>
     </div>
-</header>
-    {{template "content" .}}
-<footer>
-    <p>Quick-Elec. Warrington, Cheshire &amp; North West Electricians. Site by Contra Design</p>
-    <a href="https://www.ratedpeople.com/profile/quick-elec/" target="_blank"><div class="rated"></div></a>
-</footer>
-
+</section>
 <script src="/dist/app.js?id=0"></script>
 </body>
 </html>
