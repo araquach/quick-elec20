@@ -39,71 +39,75 @@
     <link rel="stylesheet" href="/dist/app.css?id=0">
 </head>
 <body>
-<section class="section">
-    <div class="container">
-        <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">
-                    <img src="/dist/img/new_logo.png">
-                </a>
-                <h1>07943 707648</h1>
-
-                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a href="/" class="navbar-item">
-                        Home
+    <div>
+        <div class="container">
+            <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <h1>Quick-Elec</h1>
+                    <h1>North West Electricians</h1>
+                    <a class="navbar-item" href="/">
+                        <img src="/dist/img/new_logo.png">
                     </a>
+                    <h1>07943 707648</h1>
 
-                    <a href="/about" class="navbar-item">
-                        About
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </a>
+                </div>
 
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            More
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a href="/" class="navbar-item">
+                            Home
                         </a>
 
-                        <div class="navbar-dropdown">
-                            <a href="/domestic" class="navbar-item">
-                                Domestic
-                            </a>
-                            <a href="/commercial" class="navbar-item">
-                                Commercial
-                            </a>
-                            <a href="/testimonials" class="navbar-item">
-                                Testimonials
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                        <a href="/about" class="navbar-item">
+                            About
+                        </a>
 
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <div class="buttons">
-                            <a href="/contact" class="button is-primary">
-                                <strong>Contact Us</strong>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">
+                                More
                             </a>
-                            <a href="https://www.facebook.com/QuickElec" target="_blank"><div class="social facebook"></div></a>
-                            <a href="https://twitter.com/QuickElec" target="_blank"><div class="social twitter"></div></a>
+
+                            <div class="navbar-dropdown">
+                                <a href="/domestic" class="navbar-item">
+                                    Domestic
+                                </a>
+                                <a href="/commercial" class="navbar-item">
+                                    Commercial
+                                </a>
+                                <a href="/testimonials" class="navbar-item">
+                                    Testimonials
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a href="/contact" class="button is-primary">
+                                    <strong>Contact Us</strong>
+                                </a>
+                                <a href="https://www.facebook.com/QuickElec" target="_blank"><div class="social facebook"></div></a>
+                                <a href="https://twitter.com/QuickElec" target="_blank"><div class="social twitter"></div></a>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </nav>
+            <div id="app">
+                {{template "content" .}}
             </div>
-        </nav>
-        {{template "content" .}}
-        <footer>
-            <p>Quick-Elec. Warrington, Cheshire &amp; North West Electricians. Site by Contra Design</p>
-            <a href="https://www.ratedpeople.com/profile/quick-elec/" target="_blank"><div class="rated"></div></a>
-        </footer>
+            <footer>
+                <p>Quick-Elec. Warrington, Cheshire &amp; North West Electricians. Site by Contra Design</p>
+                <a href="https://www.ratedpeople.com/profile/quick-elec/" target="_blank"><div class="rated"></div></a>
+            </footer>
+        </div>
     </div>
-</section>
 <script src="/dist/app.js?id=0"></script>
 </body>
 </html>
