@@ -11,7 +11,8 @@ $grey: rgb(83, 96, 102);
 $white: #FFF;
 $sky: rgb(90, 138, 186);
 
-@import "node_modules/bulma/bulma.sass";
+@import "~bulma/bulma.sass";
+@import "~buefy/src/scss/buefy";
 
 .container {
   border: 1px solid rgba($grey, .5);
@@ -21,6 +22,15 @@ $sky: rgb(90, 138, 186);
   h1 {
     display: none;
   }
+}
+
+.box {
+  background-color: rgba($sky, .8);
+  border: .1em solid $sky;
+  width: 23rem;
+  color: white;
+  font-size: 1rem;
+  text-align: center;
 }
 
 

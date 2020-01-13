@@ -1,69 +1,94 @@
 <template>
-    <section>
-        <div style="padding: 1.5rem">
-            <b-field grouped group-multiline position="is-centered">
-                <b-switch v-model="arrow"><strong>Arrow</strong></b-switch>
-                <b-switch v-model="arrowBoth" :disabled="!arrow">Both</b-switch>
-                <b-switch v-model="arrowHover" :disabled="!arrow">Hover</b-switch>
-            </b-field><br>
-            <b-field grouped group-multiline position="is-centered">
-                <b-field label="Icon Pack">
-                    <b-input v-model="iconPack" placeholder="e.g. mdi, fa or other"/>
-                </b-field>
-                <b-field label="Icon Size">
-                    <b-select v-model="iconSize">
-                        <option value="">default</option>
-                        <option value="is-small">is-small</option>
-                        <option value="is-medium">is-medium</option>
-                        <option value="is-large">is-large</option>
-                    </b-select>
-                </b-field>
-                <b-field label="Icon Prev">
-                    <b-input v-model="iconPrev"/>
-                </b-field>
-                <b-field label="Icon Next">
-                    <b-input v-model="iconNext"/>
-                </b-field>
-            </b-field>
-        </div>
-
-        <b-carousel
-                :arrow="arrow"
-                :arrow-both="arrowBoth"
-                :arrow-hover="arrowHover"
-                :icon-pack="iconPack"
-                :icon-prev="iconPrev"
-                :icon-next="iconNext"
-                :icon-size="iconSize">
-            <b-carousel-item v-for="(carousel, i) in carousels" :key="i">
-                <section :class="`hero is-medium is-${carousel.color}`">
-                    <div class="hero-body has-text-centered">
-                        <h1 class="title">{{carousel.title}}</h1>
+    <b-carousel
+            :autoplay="true">
+        <b-carousel-item v-for="(item, i) in items" :key="i">
+            <div class="hero is-large" :class="item.image">
+                <div class="hero-body">
+                    <div class="box">
+                        <h1 class="title has-text-white">{{item.title}}</h1>
+                        <p>{{item.text}}</p>
                     </div>
-                </section>
-            </b-carousel-item>
-        </b-carousel>
-    </section>
+                </div>
+            </div>
+        </b-carousel-item>
+    </b-carousel>
 </template>
 
 <script>
     export default {
         data() {
             return {
-                arrow: true,
-                arrowBoth: false,
-                arrowHover: false,
-                iconPack: 'mdi',
-                iconPrev: 'arrow-left',
-                iconNext: 'arrow-right',
-                iconSize: '',
-                carousels: [
-                    { title: 'Slide 1', color: 'info' },
-                    { title: 'Slide 2', color: 'success' },
-                    { title: 'Slide 3', color: 'warning' },
-                    { title: 'Slide 4', color: 'danger' }
+                items: [
+                    {
+                        title: 'Expert residential and commercial electricians',
+                        text: 'Years of experience, friendly & reliable service',
+                        image: 'plans',
+                        side: 'is-left'
+                    },
+                    {
+                        title: 'Full and partial rewires',
+                        text: 'We offer a full range of services to the homeowner from fitting a couple of sockets or light fitting to a complete rewire',
+                        image: 'electrician',
+                        side: 'is-right'
+                    },
+                    {
+                        title: 'Burglar Alarm & CCTV installation',
+                        text: 'Ensure your home or business are fully secured. Quick-Elec will install burglar alarms and CCTV systems to suit your budget and your needs',
+                        image: 'cctv',
+                        side: 'is-left'
+                    },
+                    {
+                        title: 'Consumer unit upgrades',
+                        text: 'All household consumer units should be RCD protected. An RCD, or residual current device, is a life-saving device which is designed to prevent you from getting a fatal electric shock. It can also provide protection against electrical fires. Contact us for a free quote',
+                        image: 'board',
+                        side: 'is-right'
+                    },
+                    {
+                        title: 'Lighting updates',
+                        text: 'Upgrade the lighting in your home with down lights, led lighting and security lighting. Whatever your lighting needs Quick-Elec will deliver',
+                        image: 'ceiling',
+                        side: 'is-left'
+                    },
+                    {
+                        title: 'Energy saving upgrades',
+                        text: 'Upgrade your home or business with Quick-Elec and save upto 30% on your energy bills',
+                        image: 'sofa',
+                        side: 'is-right'
+                    },
+                    {
+                        title: 'Add lighting to your outdoor space',
+                        text: 'Add a touch of class to your garden or patio area',
+                        image: 'exterior',
+                        side: 'is-left'
+                    }
                 ]
             }
         }
     }
 </script>
+<style>
+    .hero {
+        background-size: cover;
+    }
+    .plans {
+        background-image: url("/dist/img/slider/plans.jpg");
+    }
+    .electrician {
+        background-image: url("/dist/img/slider/electrician.jpg");
+    }
+    .cctv {
+        background-image: url("/dist/img/slider/cctv.jpg");
+    }
+    .board {
+        background-image: url("/dist/img/slider/board.jpg");
+    }
+    .ceiling {
+        background-image: url("/dist/img/slider/ceiling.jpg");
+    }
+    .sofa {
+        background-image: url("/dist/img/slider/sofa.jpg");
+    }
+    .exterior {
+        background-image: url("/dist/img/slider/exterior.jpg");
+    }
+</style>
