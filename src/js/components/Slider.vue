@@ -2,11 +2,13 @@
     <b-carousel
             :autoplay="true">
         <b-carousel-item v-for="(item, i) in items" :key="i">
-            <div class="hero is-large" :class="item.image">
+            <div class="hero is-medium" :class="item.image">
                 <div class="hero-body">
                     <div class="box">
                         <h1 class="title has-text-white">{{item.title}}</h1>
                         <p>{{item.text}}</p>
+                        <br>
+                        <a :href="item.link" class="has-text-white is-size-5">{{item.linkText}}</a>
                     </div>
                 </div>
             </div>
@@ -23,44 +25,59 @@
                         title: 'Expert residential and commercial electricians',
                         text: 'Years of experience, friendly & reliable service',
                         image: 'plans',
+                        link: '/about',
+                        linkText: 'Find Out More >',
                         side: 'is-left'
                     },
                     {
                         title: 'Full and partial rewires',
                         text: 'We offer a full range of services to the homeowner from fitting a couple of sockets or light fitting to a complete rewire',
                         image: 'electrician',
+                        link: '/about',
+                        linkText: 'More Info >',
                         side: 'is-right'
                     },
                     {
                         title: 'Burglar Alarm & CCTV installation',
                         text: 'Ensure your home or business are fully secured. Quick-Elec will install burglar alarms and CCTV systems to suit your budget and your needs',
                         image: 'cctv',
+                        link: '/about',
+                        linkText: 'Find Out More >',
                         side: 'is-left'
                     },
                     {
                         title: 'Consumer unit upgrades',
-                        text: 'All household consumer units should be RCD protected. An RCD, or residual current device, is a life-saving device which is designed to prevent you from getting a fatal electric shock. It can also provide protection against electrical fires. Contact us for a free quote',
+                        text: 'All household consumer units should be RCD protected. An RCD, or residual current device, is a life-saving device which is designed to prevent you from getting a fatal electric shock',
                         image: 'board',
+                        link: '/about',
+                        linkText: 'Find Out More >',
                         side: 'is-right'
                     },
                     {
                         title: 'Lighting updates',
                         text: 'Upgrade the lighting in your home with down lights, led lighting and security lighting. Whatever your lighting needs Quick-Elec will deliver',
                         image: 'ceiling',
+                        link: '/domestic',
+                        linkText: 'Click for more info >',
                         side: 'is-left'
                     },
                     {
                         title: 'Energy saving upgrades',
                         text: 'Upgrade your home or business with Quick-Elec and save upto 30% on your energy bills',
                         image: 'sofa',
+                        link: '/about',
+                        linkText: 'More Here >',
                         side: 'is-right'
                     },
                     {
                         title: 'Add lighting to your outdoor space',
                         text: 'Add a touch of class to your garden or patio area',
                         image: 'exterior',
+                        link: '/exterior',
+                        linkText: 'Find Out More >',
                         side: 'is-left'
                     }
+
                 ]
             }
         }

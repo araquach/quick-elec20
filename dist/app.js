@@ -111,6 +111,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -118,36 +120,50 @@ __webpack_require__.r(__webpack_exports__);
         title: 'Expert residential and commercial electricians',
         text: 'Years of experience, friendly & reliable service',
         image: 'plans',
+        link: '/about',
+        linkText: 'Find Out More >',
         side: 'is-left'
       }, {
         title: 'Full and partial rewires',
         text: 'We offer a full range of services to the homeowner from fitting a couple of sockets or light fitting to a complete rewire',
         image: 'electrician',
+        link: '/about',
+        linkText: 'More Info >',
         side: 'is-right'
       }, {
         title: 'Burglar Alarm & CCTV installation',
         text: 'Ensure your home or business are fully secured. Quick-Elec will install burglar alarms and CCTV systems to suit your budget and your needs',
         image: 'cctv',
+        link: '/about',
+        linkText: 'Find Out More >',
         side: 'is-left'
       }, {
         title: 'Consumer unit upgrades',
-        text: 'All household consumer units should be RCD protected. An RCD, or residual current device, is a life-saving device which is designed to prevent you from getting a fatal electric shock. It can also provide protection against electrical fires. Contact us for a free quote',
+        text: 'All household consumer units should be RCD protected. An RCD, or residual current device, is a life-saving device which is designed to prevent you from getting a fatal electric shock',
         image: 'board',
+        link: '/about',
+        linkText: 'Find Out More >',
         side: 'is-right'
       }, {
         title: 'Lighting updates',
         text: 'Upgrade the lighting in your home with down lights, led lighting and security lighting. Whatever your lighting needs Quick-Elec will deliver',
         image: 'ceiling',
+        link: '/domestic',
+        linkText: 'Click for more info >',
         side: 'is-left'
       }, {
         title: 'Energy saving upgrades',
         text: 'Upgrade your home or business with Quick-Elec and save upto 30% on your energy bills',
         image: 'sofa',
+        link: '/about',
+        linkText: 'More Here >',
         side: 'is-right'
       }, {
         title: 'Add lighting to your outdoor space',
         text: 'Add a touch of class to your garden or patio area',
         image: 'exterior',
+        link: '/exterior',
+        linkText: 'Find Out More >',
         side: 'is-left'
       }]
     };
@@ -15172,14 +15188,25 @@ var render = function() {
     { attrs: { autoplay: true } },
     _vm._l(_vm.items, function(item, i) {
       return _c("b-carousel-item", { key: i }, [
-        _c("div", { staticClass: "hero is-large", class: item.image }, [
+        _c("div", { staticClass: "hero is-medium", class: item.image }, [
           _c("div", { staticClass: "hero-body" }, [
             _c("div", { staticClass: "box" }, [
               _c("h1", { staticClass: "title has-text-white" }, [
                 _vm._v(_vm._s(item.title))
               ]),
               _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(item.text))])
+              _c("p", [_vm._v(_vm._s(item.text))]),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "has-text-white is-size-5",
+                  attrs: { href: item.link }
+                },
+                [_vm._v(_vm._s(item.linkText))]
+              )
             ])
           ])
         ])
