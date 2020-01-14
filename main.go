@@ -184,6 +184,7 @@ func main() {
 	r.HandleFunc("/commercial", commercial).Methods("GET")
 	r.HandleFunc("/domestic", domestic).Methods("GET")
 	r.HandleFunc("/testimonials", testimonials).Methods("GET")
+	r.HandleFunc("/exterior", exterior).Methods("GET")
 	r.HandleFunc("/contact", contact).Methods("GET")
 	// api
 	r.HandleFunc("/api/sendMessage", apiSendMessage).Methods("POST")

@@ -10,7 +10,6 @@
                     <div class="box">
                         <h1 class="title has-text-white">{{item.title}}</h1>
                         <p class="is-size-5">{{item.text}}</p>
-                        <br>
                         <a :href="item.link" class="has-text-white is-size-5">{{item.linkText}}</a>
                     </div>
                 </div>

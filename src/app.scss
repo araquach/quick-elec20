@@ -8,7 +8,7 @@ $card-shadow: 0 0 1px 0 rgb(255,255,255);
 
 $grey: rgb(83, 96, 102);
 $white: #FFF;
-$sky: rgb(27, 112, 232);
+$sky: rgb(90, 138, 186);
 $orange: rgb(249, 182, 17);
 
 $primary: rgb(0,0,51);
@@ -23,7 +23,22 @@ $card-header-background-color: rgb(0,0,51);
   border: 1px solid rgba($grey, .5);
 }
 
+.image {
+  border: 4px solid #FFF;
+}
+
+.card {
+  .image {
+    border: none;
+  }
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
 ul {
+  margin: 2rem 0;
   li {
     list-style-type: disc;
     list-style-position: inside;
@@ -40,24 +55,51 @@ ul {
   max-height: 5rem;
 }
 
-.box {
-  background-color: rgba($sky, .8);
-  border: .1em solid $sky;
-  width: 25rem;
-  height: 20rem;
-  color: white;
-  font-size: 1rem;
-  text-align: center;
-  @include until($tablet) {
-    width: 100%;
+.navbar-dropdown {
+  background-color: rgba($primary, .7);
+}
+
+.hero-body {
+  .box {
+    background-color: rgba($sky, .8);
+    border: .1em solid $sky;
+    width: 25rem;
     height: 20rem;
-    border: none;
-    border-radius: 0;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    @include until($tablet) {
+      width: 100%;
+      height: 20rem;
+      border: none;
+      border-radius: 0;
+    }
+  }
+}
+
+#testimonials {
+  p {
+    margin-bottom: .7rem;
+  }
+
+  p:nth-of-type(1) {
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+
+  p:nth-of-type(3) {
+    font-size: .9rem;
+    font-weight: bold;
   }
 }
 
 #about {
-  background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('/dist/img/stock/qe_kitchen.jpeg') no-repeat top center;
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/stock/qe_kitchen.jpeg') no-repeat top center;
+  background-size: cover;
+}
+
+#domestic {
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/stock/qe_living_room.jpeg') no-repeat top center;
   background-size: cover;
 }
 
@@ -66,10 +108,19 @@ ul {
   background-size: cover;
 }
 
+#exterior {
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/stock/qe_exterior.jpeg') no-repeat top center;
+  background-size: cover;
+}
+
+#testimonials {
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.6)), url('/dist/img/stock/qe_kitchen.jpeg') no-repeat top center;
+  background-size: cover;
+}
+
 .footer {
   background-color: $primary;
   color: #FFF;
 }
-
 
 

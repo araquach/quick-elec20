@@ -115,7 +115,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -15208,8 +15207,6 @@ var render = function() {
               _c("p", { staticClass: "is-size-5" }, [
                 _vm._v(_vm._s(item.text))
               ]),
-              _vm._v(" "),
-              _c("br"),
               _vm._v(" "),
               _c(
                 "a",
