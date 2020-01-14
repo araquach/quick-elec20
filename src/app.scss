@@ -118,6 +118,17 @@ ul {
   background-size: cover;
 }
 
+#contact {
+  background: url('/dist/img/stock/qe_reception_desk.jpeg') no-repeat top center;
+  background-size: cover;
+  .column {
+    background-color: rgba(256,256,256, 0.7);
+    border-radius: 1rem;
+    padding: 2rem;
+    min-height: 10rem;
+  }
+}
+
 .footer {
   background-color: $primary;
   color: #FFF;

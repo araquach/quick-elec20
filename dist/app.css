@@ -17994,6 +17994,18 @@ ul li {
   background-size: cover;
 }
 
+#contact {
+  background: url("/dist/img/stock/qe_reception_desk.jpeg") no-repeat top center;
+  background-size: cover;
+}
+
+#contact .column {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  padding: 2rem;
+  min-height: 10rem;
+}
+
 .footer {
   background-color: #000033;
   color: #FFF;
