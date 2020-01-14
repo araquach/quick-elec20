@@ -39,7 +39,7 @@
             </div>
         </div>
         <div v-if="submitStatus === 'OK'">
-            <p class="is-size-4 has-text-primary">Thanks for messaging us! One of our team will get back to you soon.</p>
+            <p class="is-size-4 has-text-primary">Thanks for messaging us - We'll get back to you soon. If it's an emergency please call the number above.</p>
         </div>
     </form>
 </template>

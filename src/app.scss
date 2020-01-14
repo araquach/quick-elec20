@@ -94,38 +94,38 @@ ul {
 }
 
 #about {
-  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/stock/qe_kitchen.jpeg') no-repeat top center;
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/pages/about/bground.jpeg') no-repeat top center;
   background-size: cover;
 }
 
 #domestic {
-  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/stock/qe_living_room.jpeg') no-repeat top center;
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/pages/domestic/bground.jpeg') no-repeat top center;
   background-size: cover;
 }
 
 #commercial {
-  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/stock/qe_office.jpeg') no-repeat top center;
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/pages/commercial/bground.jpeg') no-repeat top center;
   background-size: cover;
 }
 
 #exterior {
-  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/stock/qe_exterior.jpeg') no-repeat top center;
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/pages/exterior/bground.jpeg') no-repeat top center;
   background-size: cover;
 }
 
 #testimonials {
-  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.6)), url('/dist/img/stock/qe_kitchen.jpeg') no-repeat top center;
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.6)), url('/dist/img/pages/testimonials/bground.jpeg') no-repeat top center;
   background-size: cover;
 }
 
 #contact {
-  background: url('/dist/img/stock/qe_reception_desk.jpeg') no-repeat top center;
+  background: url('/dist/img/pages/contact/bground.jpeg') no-repeat top center;
   background-size: cover;
   .column {
     background-color: rgba(256,256,256, 0.7);
     border-radius: 1rem;
     padding: 2rem;
-    min-height: 10rem;
+    min-height: 30rem;
   }
 }
 

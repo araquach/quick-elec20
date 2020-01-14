@@ -17308,7 +17308,7 @@ var render = function() {
         ? _c("div", [
             _c("p", { staticClass: "is-size-4 has-text-primary" }, [
               _vm._v(
-                "Thanks for messaging us! One of our team will get back to you soon."
+                "Thanks for messaging us - We'll get back to you soon. If it's an emergency please call the number above."
               )
             ])
           ])
