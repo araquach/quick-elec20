@@ -41,69 +41,71 @@
 </head>
 <body>
     <div>
-        <div class="container">
-            <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation">
-                <div class="navbar-brand">
-                    <h1>Quick-Elec</h1>
-                    <h1>North West Electricians</h1>
-                    <a class="navbar-item" href="/">
-                        <img src="/dist/img/qe_logo.svg" width="130">
-                    </a>
-                    <h1>07943 707648</h1>
+        <div id="app" class="container">
+            <nav-component/>
 
-                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
-                </div>
+{{/*            <nav class="navbar is-primary is-spaced" role="navigation" aria-label="main navigation">*/}}
+{{/*                <div class="navbar-brand">*/}}
+{{/*                    <h1>Quick-Elec</h1>*/}}
+{{/*                    <h1>North West Electricians</h1>*/}}
+{{/*                    <a class="navbar-item" href="/">*/}}
+{{/*                        <img src="/dist/img/qe_logo.svg" width="130">*/}}
+{{/*                    </a>*/}}
+{{/*                    <h1>07943 707648</h1>*/}}
 
-                <div id="navbarBasicExample" class="navbar-menu">
-                    <div class="navbar-start">
-                        <a href="/" class="navbar-item">
-                            Home
-                        </a>
+{{/*                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">*/}}
+{{/*                        <span aria-hidden="true"></span>*/}}
+{{/*                        <span aria-hidden="true"></span>*/}}
+{{/*                        <span aria-hidden="true"></span>*/}}
+{{/*                    </a>*/}}
+{{/*                </div>*/}}
 
-                        <a href="/about" class="navbar-item">
-                            About
-                        </a>
+{{/*                <div id="navbarBasicExample" class="navbar-menu">*/}}
+{{/*                    <div class="navbar-start">*/}}
+{{/*                        <a href="/" class="navbar-item">*/}}
+{{/*                            Home*/}}
+{{/*                        </a>*/}}
 
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">
-                                More
-                            </a>
+{{/*                        <a href="/about" class="navbar-item">*/}}
+{{/*                            About*/}}
+{{/*                        </a>*/}}
 
-                            <div class="navbar-dropdown">
-                                <a href="/domestic" class="navbar-item">
-                                    Domestic
-                                </a>
-                                <a href="/commercial" class="navbar-item">
-                                    Commercial
-                                </a>
-                                <a href="/exterior" class="navbar-item">
-                                    Exterior
-                                </a>
-                                <a href="/testimonials" class="navbar-item">
-                                    Testimonials
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+{{/*                        <div class="navbar-item has-dropdown is-hoverable">*/}}
+{{/*                            <a class="navbar-link">*/}}
+{{/*                                More*/}}
+{{/*                            </a>*/}}
 
-                    <div class="navbar-end">
-                        <div class="navbar-item">
-                            <div class="buttons">
-                                <a href="/contact" class="button">
-                                    <strong>Contact Us</strong>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <div id="app">
-                {{template "content" .}}
-            </div>
+{{/*                            <div class="navbar-dropdown">*/}}
+{{/*                                <a href="/domestic" class="navbar-item">*/}}
+{{/*                                    Domestic*/}}
+{{/*                                </a>*/}}
+{{/*                                <a href="/commercial" class="navbar-item">*/}}
+{{/*                                    Commercial*/}}
+{{/*                                </a>*/}}
+{{/*                                <a href="/exterior" class="navbar-item">*/}}
+{{/*                                    Exterior*/}}
+{{/*                                </a>*/}}
+{{/*                                <a href="/testimonials" class="navbar-item">*/}}
+{{/*                                    Testimonials*/}}
+{{/*                                </a>*/}}
+{{/*                            </div>*/}}
+{{/*                        </div>*/}}
+{{/*                    </div>*/}}
+
+{{/*                    <div class="navbar-end">*/}}
+{{/*                        <div class="navbar-item">*/}}
+{{/*                            <div class="buttons">*/}}
+{{/*                                <a href="/contact" class="button">*/}}
+{{/*                                    <strong>Contact Us</strong>*/}}
+{{/*                                </a>*/}}
+{{/*                            </div>*/}}
+{{/*                        </div>*/}}
+{{/*                    </div>*/}}
+{{/*                </div>*/}}
+{{/*            </nav>*/}}
+
+            {{template "content" .}}
+
             <footer class="footer">
                 <div class="content has-text-centered">
                     <p>Quick-Elec. Warrington, Cheshire &amp; North West Electricians. Site by Contra Design</p>
