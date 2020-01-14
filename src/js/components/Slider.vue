@@ -1,12 +1,15 @@
 <template>
     <b-carousel
-            :autoplay="true">
+            :autoplay="true"
+            :interval="5000"
+            :pause-hover="true"
+            :pause-info="false">
         <b-carousel-item v-for="(item, i) in items" :key="i">
             <div class="hero is-medium" :class="item.image">
                 <div class="hero-body">
                     <div class="box">
                         <h1 class="title has-text-white">{{item.title}}</h1>
-                        <p>{{item.text}}</p>
+                        <p class="is-size-5">{{item.text}}</p>
                         <br>
                         <a :href="item.link" class="has-text-white is-size-5">{{item.linkText}}</a>
                     </div>

@@ -113,6 +113,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -15185,7 +15188,14 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "b-carousel",
-    { attrs: { autoplay: true } },
+    {
+      attrs: {
+        autoplay: true,
+        interval: 5000,
+        "pause-hover": true,
+        "pause-info": false
+      }
+    },
     _vm._l(_vm.items, function(item, i) {
       return _c("b-carousel-item", { key: i }, [
         _c("div", { staticClass: "hero is-medium", class: item.image }, [
@@ -15195,7 +15205,9 @@ var render = function() {
                 _vm._v(_vm._s(item.title))
               ]),
               _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(item.text))]),
+              _c("p", { staticClass: "is-size-5" }, [
+                _vm._v(_vm._s(item.text))
+              ]),
               _vm._v(" "),
               _c("br"),
               _vm._v(" "),
