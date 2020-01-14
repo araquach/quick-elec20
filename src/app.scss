@@ -6,10 +6,13 @@ $navbar-dropdown-background-color: rgba(66, 85, 89,.7);
 $card-background-color: rgba(0,0,0,0.8);
 $card-shadow: 0 0 1px 0 rgb(255,255,255);
 
-$primary: rgb(0,0,51);
 $grey: rgb(83, 96, 102);
 $white: #FFF;
-$sky: rgb(90, 138, 186);
+$sky: rgb(27, 112, 232);
+$orange: rgb(249, 182, 17);
+
+$primary: rgb(0,0,51);
+$warning: $orange;
 
 @import "~bulma/bulma.sass";
 @import "~buefy/src/scss/buefy";
@@ -22,6 +25,10 @@ $sky: rgb(90, 138, 186);
   h1 {
     display: none;
   }
+}
+
+.navbar-item img {
+  max-height: 5rem;
 }
 
 .box {
@@ -40,6 +47,10 @@ $sky: rgb(90, 138, 186);
   }
 }
 
+.footer {
+  background-color: $primary;
+  color: #FFF;
+}
 
 
 

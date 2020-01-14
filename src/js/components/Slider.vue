@@ -2,7 +2,7 @@
     <b-carousel
             :autoplay="true"
             :interval="5000"
-            :pause-hover="true"
+            :pause-hover="false"
             :pause-info="false">
         <b-carousel-item v-for="(item, i) in items" :key="i">
             <div class="hero is-medium" :class="item.image">
@@ -86,10 +86,11 @@
         }
     }
 </script>
-<style>
+<style lang="scss" scoped>
     .hero {
         background-size: cover;
     }
+
     .plans {
         background-image: url("/dist/img/slider/plans.jpg");
     }
