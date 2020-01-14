@@ -6509,7 +6509,7 @@ fieldset[disabled] .select select:hover {
 }
 
 .card-header {
-  background-color: transparent;
+  background-color: #000033;
   -webkit-box-align: stretch;
           align-items: stretch;
   box-shadow: 0 0.125em 0.25em rgba(10, 10, 10, 0.1);
@@ -17923,6 +17923,12 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
     border: none;
     border-radius: 0;
   }
+}
+
+#about {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("/dist/img/stock/qe_kitchen.jpeg") no-repeat top center;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("/dist/img/stock/qe_kitchen.jpeg") no-repeat top center;
+  background-size: cover;
 }
 
 .footer {
