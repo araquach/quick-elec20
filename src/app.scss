@@ -23,6 +23,13 @@ $card-header-background-color: rgb(0,0,51);
   border: 1px solid rgba($grey, .5);
 }
 
+ul {
+  li {
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+}
+
 .navbar-brand {
   h1 {
     display: none;
@@ -51,6 +58,11 @@ $card-header-background-color: rgb(0,0,51);
 
 #about {
   background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url('/dist/img/stock/qe_kitchen.jpeg') no-repeat top center;
+  background-size: cover;
+}
+
+#commercial {
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url('/dist/img/stock/qe_office.jpeg') no-repeat top center;
   background-size: cover;
 }
 

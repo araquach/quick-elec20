@@ -17898,6 +17898,11 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   border: 1px solid rgba(83, 96, 102, 0.5);
 }
 
+ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 .navbar-brand h1 {
   display: none;
 }
@@ -17928,6 +17933,12 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
 #about {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.7)), to(rgba(255, 255, 255, 0.7))), url("/dist/img/stock/qe_kitchen.jpeg") no-repeat top center;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("/dist/img/stock/qe_kitchen.jpeg") no-repeat top center;
+  background-size: cover;
+}
+
+#commercial {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/stock/qe_office.jpeg") no-repeat top center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/stock/qe_office.jpeg") no-repeat top center;
   background-size: cover;
 }
 
