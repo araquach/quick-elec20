@@ -2,7 +2,7 @@
     <form @submit.prevent="submit">
         <div v-if="submitStatus !== 'OK'">
             <div class="field">
-                <label class="label">Full Name</label>
+                <label class="label has-text-white">Full Name</label>
                 <div class="control">
                     <input class="input" v-model.trim="$v.name.$model" :class="{ 'is-danger': $v.name.$error }" placeholder="Your Full Name">
                 </div>
@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="field">
-                <label class="label">Email Address</label>
+                <label class="label has-text-white">Email Address</label>
                 <div class="control">
                     <input class="input" :class="{ 'is-danger': $v.email.$error }" v-model.trim="$v.email.$model" placeholder="Your Email Address">
                     <div class="help is-danger" v-if="submitStatus === 'ERROR' && !$v.email.required">
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="field">
-                <label class="label">Message</label>
+                <label class="label has-text-white">Message</label>
                 <div class="control">
                     <input class="textarea" :class="{ 'is-danger': $v.message.$error }" v-model.trim="$v.message.$model" placeholder="Your Message">
                     <div class="help is-danger" v-if="submitStatus === 'ERROR' && !$v.message.required">

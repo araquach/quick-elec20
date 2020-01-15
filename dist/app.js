@@ -17144,7 +17144,9 @@ var render = function() {
       _vm.submitStatus !== "OK"
         ? _c("div", [
             _c("div", { staticClass: "field" }, [
-              _c("label", { staticClass: "label" }, [_vm._v("Full Name")]),
+              _c("label", { staticClass: "label has-text-white" }, [
+                _vm._v("Full Name")
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "control" }, [
                 _c("input", {
@@ -17187,7 +17189,9 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "field" }, [
-              _c("label", { staticClass: "label" }, [_vm._v("Email Address")]),
+              _c("label", { staticClass: "label has-text-white" }, [
+                _vm._v("Email Address")
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "control" }, [
                 _c("input", {
@@ -17240,7 +17244,9 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "field" }, [
-              _c("label", { staticClass: "label" }, [_vm._v("Message")]),
+              _c("label", { staticClass: "label has-text-white" }, [
+                _vm._v("Message")
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "control" }, [
                 _c("input", {
@@ -17340,19 +17346,18 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "b-navbar",
+    { staticClass: "navbar is-primary is-spaced" },
     [
       _c(
         "template",
         { slot: "brand" },
         [
+          _c("h1", [_vm._v("Quick-Elec")]),
+          _vm._v(" "),
+          _c("h1", [_vm._v("North West Electricians")]),
+          _vm._v(" "),
           _c("b-navbar-item", { attrs: { href: "/" } }, [
-            _c("img", {
-              attrs: {
-                src:
-                  "https://raw.githubusercontent.com/buefy/buefy/dev/static/img/buefy-logo.png",
-                alt: "Lightweight UI components for Vue.js based on Bulma"
-              }
-            })
+            _c("img", { attrs: { src: "/dist/img/qe_logo.svg", width: "130" } })
           ])
         ],
         1
@@ -17362,24 +17367,32 @@ var render = function() {
         "template",
         { slot: "start" },
         [
-          _c("b-navbar-item", { attrs: { href: "#" } }, [
+          _c("b-navbar-item", { attrs: { href: "/" } }, [
             _vm._v("\n            Home\n        ")
           ]),
           _vm._v(" "),
-          _c("b-navbar-item", { attrs: { href: "#" } }, [
-            _vm._v("\n            Documentation\n        ")
+          _c("b-navbar-item", { attrs: { href: "/about" } }, [
+            _vm._v("\n            About\n        ")
           ]),
           _vm._v(" "),
           _c(
             "b-navbar-dropdown",
-            { attrs: { label: "Info" } },
+            { attrs: { label: "More" } },
             [
-              _c("b-navbar-item", { attrs: { href: "#" } }, [
-                _vm._v("\n                About\n            ")
+              _c("b-navbar-item", { attrs: { href: "/domestic" } }, [
+                _vm._v("\n                Domestic\n            ")
               ]),
               _vm._v(" "),
-              _c("b-navbar-item", { attrs: { href: "#" } }, [
-                _vm._v("\n                Contact\n            ")
+              _c("b-navbar-item", { attrs: { href: "/commercial" } }, [
+                _vm._v("\n                Commercial\n            ")
+              ]),
+              _vm._v(" "),
+              _c("b-navbar-item", { attrs: { href: "/exterior" } }, [
+                _vm._v("\n                Exterior\n            ")
+              ]),
+              _vm._v(" "),
+              _c("b-navbar-item", { attrs: { href: "/testimonials" } }, [
+                _vm._v("\n                Testimonials\n            ")
               ])
             ],
             1
@@ -17394,13 +17407,11 @@ var render = function() {
         [
           _c("b-navbar-item", { attrs: { tag: "div" } }, [
             _c("div", { staticClass: "buttons" }, [
-              _c("a", { staticClass: "button is-primary" }, [
-                _c("strong", [_vm._v("Sign up")])
-              ]),
-              _vm._v(" "),
-              _c("a", { staticClass: "button is-light" }, [
-                _vm._v("\n                    Log in\n                ")
-              ])
+              _c(
+                "a",
+                { staticClass: "button is-light", attrs: { href: "/contact" } },
+                [_vm._v("\n                    Contact Us\n                ")]
+              )
             ])
           ])
         ],
@@ -17447,7 +17458,7 @@ var render = function() {
         _c("div", { staticClass: "hero is-medium", class: item.image }, [
           _c("div", { staticClass: "hero-body" }, [
             _c("div", { staticClass: "box" }, [
-              _c("h1", { staticClass: "title has-text-white" }, [
+              _c("h1", { staticClass: "title is-4 has-text-white" }, [
                 _vm._v(_vm._s(item.title))
               ]),
               _vm._v(" "),
@@ -31790,8 +31801,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/adam-macbook/GoSites/quick-elec20/src/js/app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! /Users/adam-macbook/GoSites/quick-elec20/src/app.scss */"./src/app.scss");
+__webpack_require__(/*! /Users/imac-work/GoSites/quick-elec20/src/js/app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! /Users/imac-work/GoSites/quick-elec20/src/app.scss */"./src/app.scss");
 
 
 /***/ })

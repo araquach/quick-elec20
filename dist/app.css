@@ -17906,6 +17906,26 @@ MIT (https://github.com/Wikiki/bulma-steps/blob/master/LICENSE)
   border: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+li {
+  font-family: halogen, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+a.navbar-item,
+a.navbar-link {
+  font-size: 0.7rem;
+  font-family: halogen, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 p {
   margin-bottom: 1.2rem;
 }
@@ -17917,6 +17937,7 @@ ul {
 ul li {
   list-style-type: disc;
   list-style-position: inside;
+  color: #000033;
 }
 
 .navbar-brand h1 {
@@ -17925,6 +17946,12 @@ ul li {
 
 .navbar-item img {
   max-height: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    background-color: #000033;
+  }
 }
 
 .navbar-dropdown {
@@ -17965,42 +17992,43 @@ ul li {
 }
 
 #about {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/pages/about/bground.jpeg") no-repeat top center;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/pages/about/bground.jpeg") no-repeat top center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/pages/about/bground.jpg") no-repeat top center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/pages/about/bground.jpg") no-repeat top center;
   background-size: cover;
 }
 
 #domestic {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/pages/domestic/bground.jpeg") no-repeat top center;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/pages/domestic/bground.jpeg") no-repeat top center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/pages/domestic/bground.jpg") no-repeat top center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/pages/domestic/bground.jpg") no-repeat top center;
   background-size: cover;
 }
 
 #commercial {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/pages/commercial/bground.jpeg") no-repeat top center;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/pages/commercial/bground.jpeg") no-repeat top center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/pages/commercial/bground.jpg") no-repeat top center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/pages/commercial/bground.jpg") no-repeat top center;
   background-size: cover;
 }
 
 #exterior {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/pages/exterior/bground.jpeg") no-repeat top center;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/pages/exterior/bground.jpeg") no-repeat top center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/pages/exterior/bground.jpg") no-repeat top center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/pages/exterior/bground.jpg") no-repeat top center;
   background-size: cover;
 }
 
 #testimonials {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.6))), url("/dist/img/pages/testimonials/bground.jpeg") no-repeat top center;
-  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6)), url("/dist/img/pages/testimonials/bground.jpeg") no-repeat top center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.8))), url("/dist/img/pages/testimonials/bground.jpg") no-repeat top center;
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("/dist/img/pages/testimonials/bground.jpg") no-repeat top center;
   background-size: cover;
 }
 
 #contact {
-  background: url("/dist/img/pages/contact/bground.jpeg") no-repeat top center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0.4))), url("/dist/img/pages/contact/bground.jpg") no-repeat top center;
+  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("/dist/img/pages/contact/bground.jpg") no-repeat top center;
   background-size: cover;
 }
 
 #contact .column {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(90, 138, 186, 0.8);
   border-radius: 1rem;
   padding: 2rem;
   min-height: 30rem;
