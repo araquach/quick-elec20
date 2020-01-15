@@ -27,6 +27,7 @@ var (
 type ContactMessage struct {
 	Name 		string
 	Email 		string
+	Mobile		string
 	Message 	string
 }
 
@@ -100,7 +101,8 @@ func apiSendMessage(w http.ResponseWriter, r *http.Request) {
 	sender := "contact@quick-elec.co.uk"
 	subject := "New Quick-Elec Enquiry"
 	body := data.Message
-	recipient := "george@quick-elec.co.uk"
+	//recipient := "george@quick-elec.co.uk"
+	recipient := "adam@jakatasalon.co.uk"
 
 	// The message object allows you to add attachments and Bcc recipients
 	message := mg.NewMessage(sender, subject, body, recipient)

@@ -23,6 +23,18 @@
                 </div>
             </div>
             <div class="field">
+                <label class="label has-text-white">Mobile Number</label>
+                <div class="control">
+                    <input class="input" :class="{ 'is-danger': $v.mobile.$error }" v-model.trim="$v.mobile.$model" placeholder="Your Mobile Number">
+                    <div class="help is-danger" v-if="submitStatus === 'ERROR' && !$v.mobile.required">
+                        Mobile Number is required
+                    </div>
+                    <div class="help is-danger" v-if="submitStatus === 'ERROR' && !$v.mobile.numeric">
+                        Please give a correct mobile number
+                    </div>
+                </div>
+            </div>
+            <div class="field">
                 <label class="label has-text-white">Message</label>
                 <div class="control">
                     <input class="textarea" :class="{ 'is-danger': $v.message.$error }" v-model.trim="$v.message.$model" placeholder="Your Message">
@@ -45,12 +57,13 @@
 </template>
 
 <script>
-    import {required, email} from 'vuelidate/lib/validators'
+    import {required, email, numeric} from 'vuelidate/lib/validators'
     export default {
         data() {
             return {
                 name: '',
                 email: '',
+                mobile: '',
                 message: '',
                 submitStatus: null
             }
@@ -59,6 +72,7 @@
         validations: {
             name: { required },
             email: { required, email },
+            mobile: { required, numeric },
             message: { required }
         },
 
@@ -66,6 +80,7 @@
             fullMessage() {
                 return `From: ${this.name}
                 Email Address: ${this.email}
+                Mobile Number: ${this.mobile}
                 Message: ${this.message}
                 `
             },
@@ -79,6 +94,7 @@
                     axios.post('/api/sendMessage', {
                         name: this.name,
                         email: this.email,
+                        mobile: this.mobile,
                         message: this.fullMessage()
                     })
                         .then(response => {
