@@ -72,7 +72,7 @@ ul {
 }
 
 .navbar-menu {
-  @include until($tablet) {
+  @include until($desktop) {
     background-color: $primary;
   }
 }
