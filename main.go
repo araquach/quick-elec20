@@ -101,8 +101,8 @@ func apiSendMessage(w http.ResponseWriter, r *http.Request) {
 	sender := "contact@quick-elec.co.uk"
 	subject := "New Quick-Elec Enquiry"
 	body := data.Message
-	// recipient := "george@quick-elec.co.uk"
-	recipient := "george.jones91@hotmail.co.uk"
+	recipient := "george@quick-elec.co.uk"
+	// recipient := "george.jones91@hotmail.co.uk"
 
 
 	// The message object allows you to add attachments and Bcc recipients
