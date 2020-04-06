@@ -123,6 +123,19 @@ func apiSendMessage(w http.ResponseWriter, r *http.Request) {
 	return
 }
 
+func forceSsl(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if os.Getenv("GO_ENV") == "production" {
+			if r.Header.Get("x-forwarded-proto") != "https" {
+				sslUrl := "https://" + r.Host + r.RequestURI
+				http.Redirect(w, r, sslUrl, http.StatusTemporaryRedirect)
+				return
+			}
+		}
+		next.ServeHTTP(w, r)
+	})
+}
+
 func main() {
 
 	var err error
@@ -208,5 +221,5 @@ func main() {
 
 	log.Printf("Starting server on %s", port)
 
-	http.ListenAndServe(":" + port, r)
+	http.ListenAndServe(":" + port, forceSsl(r))
 }
