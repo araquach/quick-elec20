@@ -8,6 +8,7 @@ import (
 	"github.com/joho/godotenv"
 	"html/template"
 	"log"
+	"math/rand"
 	"net/http"
 	"os"
 	"time"
@@ -40,7 +41,8 @@ func init() {
 
 func home(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
-	if err := tplHome.Execute(w, nil); err != nil {
+	v := string(rand.Intn(30))
+	if err := tplHome.Execute(w, v); err != nil {
 		panic(err)
 	}
 }
