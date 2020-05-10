@@ -24,6 +24,14 @@
             return {
                 items: [
                     {
+                        title: '',
+                        text: '',
+                        image: 'open',
+                        link: '/about',
+                        linkText: '',
+                        side: 'is-left'
+                    },
+                    {
                         title: 'Expert residential and commercial electricians',
                         text: 'Years of experience, friendly & reliable service',
                         image: 'plans',
@@ -86,8 +94,19 @@
     }
 </script>
 <style lang="scss" scoped>
+    .carousel-item:first-child {
+        .box {
+            opacity: 0;
+        }
+    }
+
     .hero {
         background-size: cover;
+    }
+
+    .open {
+        background-image: url("/dist/img/slider/open.jpg");
+        background-position: center center;
     }
 
     .plans {
