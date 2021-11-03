@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
+	"github.com/mailgun/mailgun-go/v3"
 	"html/template"
 	"log"
 	"math/rand"
 	"net/http"
 	"os"
 	"time"
-	"github.com/mailgun/mailgun-go/v3"
 )
 
 var (
@@ -22,6 +22,7 @@ var (
 	tplCommercial *template.Template
 	tplTestimonials *template.Template
 	tplExterior *template.Template
+	tplSmarthome *template.Template
 	tplContact *template.Template
 )
 
@@ -78,6 +79,13 @@ func testimonials(w http.ResponseWriter, r *http.Request) {
 func exterior(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
 	if err := tplExterior.Execute(w, nil); err != nil {
+		panic(err)
+	}
+}
+
+func smarthome(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
+	if err := tplSmarthome.Execute(w, nil); err != nil {
 		panic(err)
 	}
 }
@@ -189,6 +197,13 @@ func main() {
 		panic(err)
 	}
 
+	tplSmarthome = template.Must(template.ParseFiles(
+		"views/layouts/main.gohtml",
+		"views/pages/smarthome.gohtml"))
+	if err != nil {
+		panic(err)
+	}
+
 	tplContact = template.Must(template.ParseFiles(
 		"views/layouts/main.gohtml",
 		"views/pages/contact.gohtml"))
@@ -203,6 +218,7 @@ func main() {
 	r.HandleFunc("/domestic", domestic).Methods("GET")
 	r.HandleFunc("/testimonials", testimonials).Methods("GET")
 	r.HandleFunc("/exterior", exterior).Methods("GET")
+	r.HandleFunc("/smarthome", smarthome).Methods("GET")
 	r.HandleFunc("/contact", contact).Methods("GET")
 	// api
 	r.HandleFunc("/api/sendMessage", apiSendMessage).Methods("POST")
