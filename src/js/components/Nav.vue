@@ -21,6 +21,9 @@
                 <b-navbar-item href="/commercial">
                     Commercial
                 </b-navbar-item>
+                <b-navbar-item href="/smarthome">
+                  Smart Home
+                </b-navbar-item>
                 <b-navbar-item href="/exterior">
                     Exterior
                 </b-navbar-item>
