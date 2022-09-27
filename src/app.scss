@@ -7,6 +7,7 @@ $card-background-color: rgba(0,0,0,0.8);
 $card-shadow: 0 0 1px 0 rgb(255,255,255);
 
 $grey: rgb(83, 96, 102);
+$dark-grey: rgb(30, 30, 30);
 $white: #FFF;
 $sky: rgb(90, 138, 186);
 $orange: rgb(249, 182, 17);
@@ -19,8 +20,16 @@ $card-header-background-color: rgb(0,0,51);
 @import "~bulma/bulma.sass";
 @import "~buefy/src/scss/buefy";
 
+html {
+  background-color: $dark-grey;
+}
+
+body {
+  background-color: $dark-grey;
+}
+
 .container {
-  border: 1px solid rgba($grey, .5);
+  background-color: #FFFFFF;
 }
 
 .image {
@@ -41,7 +50,7 @@ h1, h2, h3, h4, li {
 }
 
 a.navbar-item, a.navbar-link {
-  font-size: .7rem;
+  font-size: .85rem;
   font-family: halogen,sans-serif;
   font-weight: 700;
   font-style: normal;

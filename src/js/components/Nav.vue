@@ -1,10 +1,10 @@
 <template>
-    <b-navbar class="navbar is-primary is-spaced">
+    <b-navbar class="navbar is-white is-spaced">
         <template slot="brand">
             <h1>Quick-Elec</h1>
             <h1>North West Electricians</h1>
             <b-navbar-item href="/">
-                <img src="/dist/img/qe_logo.svg" width="130">
+                <img src="/dist/img/logo.svg" width="200">
             </b-navbar-item>
         </template>
         <template slot="start">
@@ -35,7 +35,7 @@
         <template slot="end">
             <b-navbar-item tag="div">
                 <div class="buttons">
-                    <a href="/contact" class="button is-light">
+                    <a href="/contact" class="button is-primary">
                         Contact Us
                     </a>
                 </div>
